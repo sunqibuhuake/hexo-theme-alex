@@ -1,5 +1,12 @@
 (function($){
+  //Remove search input icon
   $('input[type=search]').removeAttr('results');
+
+  //starting animation
+  $('#header').addClass('open');
+  $('#wrap > .outer').addClass('open');
+  $('#footer').addClass('open');
+
   // Share
   $('body').on('click', function(){
     $('.article-share-box.on').removeClass('on');
@@ -75,13 +82,19 @@
     $('.fancybox').fancybox();
   }
 
+  //Open search box
   $('#nav-search-btn').on('click', function(){
     $('#search-form-wrap').toggleClass('on');
     $('#main-nav').toggleClass('off');
   });
+  //When click other element. close search box
+  $("#wrap > .outer").on('click', function(){
+    $('#search-form-wrap').removeClass('on');
+    $('#main-nav').removeClass('off');
+  });
 
   // Mobile nav
   $('#main-nav-toggle').on('click', function(){
-    $('#mobile-nav').toggleClass('on');
+    $('#mobile-nav').toggleClass('off');
   });
 })(jQuery);
