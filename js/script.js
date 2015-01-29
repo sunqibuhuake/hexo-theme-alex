@@ -3,9 +3,11 @@
   $('input[type=search]').removeAttr('results');
 
   //starting animation
-  $('#header').addClass('open');
-  $('#wrap > .outer').addClass('open');
-  $('#footer').addClass('open');
+  $(window).on('load', function(){
+    $('#header').addClass('open');
+    $('#wrap > .outer').addClass('open');
+    $('#footer').addClass('open');
+  });
 
   // Share
   $('body').on('click', function(){
