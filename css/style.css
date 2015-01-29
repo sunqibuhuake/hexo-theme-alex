@@ -1332,6 +1332,9 @@ pre .javascript .function {
     width: 252px;
     opacity: 1;
   }
+  #footer {
+    margin-top: 0px;
+  }
 }
 @media screen and (max-width: 479px) {
   #main {
@@ -1385,6 +1388,9 @@ pre .javascript .function {
   }
   #sidebar {
     display: none;
+  }
+  #footer {
+    margin-top: 0px;
   }
 }
 #sidebar {
