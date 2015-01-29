@@ -2,12 +2,17 @@
   //Remove search input icon
   $('input[type=search]').removeAttr('results');
 
-  //starting animation
-  $(window).on('load', function(){
+  function startWindowAnim(){    
     $('#header').addClass('open');
     $('#wrap > .outer').addClass('open');
     $('#footer').addClass('open');
+  }
+
+  //starting animation
+  $(window).on('load', function(){
+    startWindowAnim();
   });
+  setTimeout(startWindowAnim, 2000);
 
   // Share
   $('body').on('click', function(){
